@@ -1,0 +1,24 @@
+{
+  "name": "redux-litelement-app",
+  "license": "MIT",
+  "scripts": {
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "start:build": "http-server dist -o -c-1",
+    "watch:build": "rimraf dist && rollup --watch -c rollup.config.js & http-server dist -o -c-1"
+  },
+  "dependencies": {
+    "dile-input": "^1.2.0",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^2.0.1",
+    "es-dev-server": "^1.14.2",
+    "http-server": "^14.1.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.6.0"
+  }
+}
